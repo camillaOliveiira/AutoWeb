@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 import LoginPage from "./login_page";
 import SelectPage from "./select_page";
-import { incluiCar, carrinhoComProd } from "../elements/inclui";
+import { incluiCar } from "../elements/inclui";
 
 export default class IncluirProd {
 

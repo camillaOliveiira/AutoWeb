@@ -13,9 +13,7 @@ export default class SelectPage  {
     }
 
     static selecionaProd(){
-
         cy.get(selectProd).click();
-       
     }
 
     static validaProd(nameProd, descProd, priceProd) {
