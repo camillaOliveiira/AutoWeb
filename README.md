@@ -34,17 +34,17 @@ Verifique se o Cypress foi instalado corretamente:
 npx cypress verify
 ```
 
-🧩 Estrutura do projeto
+🧩 Estrutura do projeto\
 
-cypress/
- ├─ e2e/
- │   ├─ features/           # Arquivos .feature com cenários BDD
- │   ├─ step_definitions/   # Implementação dos steps
- │   └─ pages/              # Page Objects (classes com métodos de tela)
- └─ support/
-      └─ e2e.js             # Configurações globais do Cypress
+cypress/\
+ ├─ e2e/\
+ │   ├─ features/           # Arquivos .feature com cenários BDD\
+ │   ├─ step_definitions/   # Implementação dos steps\
+ │   └─ pages/              # Page Objects (classes com métodos de tela)\
+ └─ support/\
+      └─ e2e.js             # Configurações globais do Cypress\
 
-⚙ Configuração do Cypress + Cucumber
+⚙ Configuração do Cypress + Cucumber\
 No cypress.config.js:
 
 ```
@@ -82,7 +82,7 @@ Para rodar todos os testes em modo headless:
 npx cypress run
 ```
 
-🌐 Referências
+🌐 Referências\
 [Cypress Documentation](https://docs.cypress.io/)
 
 [Cypress Cucumber Preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
