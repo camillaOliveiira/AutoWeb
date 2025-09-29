@@ -35,4 +35,5 @@ When(/^clicar em continue$/, () => {
 
 Then(/^devo vizualizar mensagem de erro$/, () => {
 	finalizaCompra.msgErroCheck();
+	
 });

@@ -1,6 +1,7 @@
 import LoginPageErro from "../pages/loginErro_page";
 const loginPageErro = new LoginPageErro
 
+
 Given(/^que eu queira acessar o Site$/, () => {
 	LoginPageErro.acessarHomePage()
 });
@@ -18,5 +19,6 @@ Then(/^tenho meu acesso negado$/, () => {
 });
 
 Then(/^devo vizualizar mensagem de erro$/, () => {
-	LoginPageErro.msgError()
+	LoginPageErro.msgError();
+	
 });

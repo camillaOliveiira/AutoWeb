@@ -22,5 +22,6 @@ Then(/^devo ser direcionado para a tela do produto escolhido$/, () => {
 });
 
 Then(/^vizualizar nome, descrição e preço correspondente ao produto$/, () => {
-	SelectPage.validaProd("Sauce Labs Bike Light", "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", "$9.99")
+	SelectPage.validaProd("Sauce Labs Bike Light", "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", "$9.99");
+
 });

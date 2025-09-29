@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
-import { inputUser,inputPass,btnEnter, msgErro } from "../elements/login"
+import { inputUser, inputPass, btnEnter, msgErro } from "../elements/login"
+import Evidencias from "../../support/utils/evidencias"
 
 export default class LoginPage {
 
@@ -13,6 +14,12 @@ export default class LoginPage {
     }
 
     static clickEmLogin() {
+        // interceptar antes do clique
+        cy.intercept('**/').as('loginRequest') // captura qualquer request
         cy.get(btnEnter).click()
+
+        // salvar evidências
+        Evidencias.salvarScreenshot('evidencia-login-sucesso')
+        
     }
-  }
+}

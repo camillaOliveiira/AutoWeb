@@ -2,6 +2,7 @@
 import LoginPage from "./login_page";
 import SelectPage from "./select_page";
 import { incluiCar } from "../elements/inclui";
+import Evidencias from "../../support/utils/evidencias"
 
 export default class IncluirProd {
 
@@ -24,7 +25,12 @@ export default class IncluirProd {
         cy.get('.shopping_cart_badge')
       .should('be.visible')
       .and('have.text', '1');
+ 
+ cy.intercept('**/').as('incluiRequest') // captura qualquer request
 
+
+ // salvar evidências
+ Evidencias.salvarScreenshot('evidencia-inclui-sucesso')
     }
 
 }

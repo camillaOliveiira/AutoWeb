@@ -1,7 +1,7 @@
 import finalizaCompra from "../pages/checkout_page";
 const finalizacompra = new finalizaCompra;
 import SelectPage from "../pages/select_page";
-const selectpage = SelectPage;
+const selectpage = new SelectPage;
 
 Given(/^que eu esteja logado no site$/, () => {
     finalizaCompra.acessarHomePage();
@@ -46,4 +46,5 @@ Then(/^devo ter realizado a compra$/, () => {
 
 Then(/^validar mensagem de sucesso$/, () => {
     return true;
+    
 });

@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
 import { inputUser,inputPass,btnEnter, msgErro } from "../elements/login"
+import Evidencias from "../../support/utils/evidencias"
 
 export default class LoginPageErro {
 
@@ -17,7 +18,10 @@ export default class LoginPageErro {
     }
 
     static msgError() {
-        cy.get('[data-test="error"]')
+        cy.get(msgErro)
+        cy.intercept('**/').as('loginRequest') // captura qualquer request
+        // salvar evidências
+        Evidencias.salvarScreenshot('evidencia-login-erro')
     }
 
 }

@@ -26,5 +26,6 @@ Then(/^prod deve ser incluido no carrinho$/, () => {
 });
 
 Then(/^numeração da quantidade deve aparecer no icone do carrinho$/, () => {
-	IncluirProd.validaCar()
+	IncluirProd.validaCar();
+	
 });
