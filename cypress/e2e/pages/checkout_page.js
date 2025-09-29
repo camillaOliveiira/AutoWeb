@@ -7,6 +7,7 @@ import {
     btnCheck, nameCli, lastNameCli, postCode, btnContinue, overview, descResumo
     , payInfo, payForm, total, btnFinich, checkOk, checkComplete, msgErro
 } from "../elements/checkout";
+import Evidencias from "../../support/utils/evidencias"
 
 export default class finalizaCompra {
 
@@ -44,12 +45,23 @@ export default class finalizaCompra {
         cy.get(total).should('be.visible');
     }
     static finalizando() {
-        cy.get(btnFinich).click();
+        // interceptar antes do clique
+         cy.intercept('**/').as('checkoutRequest'); // captura qualquer request
+         cy.get(btnFinich).click();
         cy.get(checkOk).should('be.visible');
         cy.get(checkComplete).should('be.visible');
+
+         // salvar evidências
+         Evidencias.salvarScreenshot('evidencia-checkout-sucesso')
     }
     static msgErroCheck() {
         cy.get(msgErro).should('be.visible');
+
+         cy.intercept('**/').as('checkouterroRequest') // captura qualquer request
+        
+ 
+         // salvar evidências
+         Evidencias.salvarScreenshot('evidencia-checkout-erro')
     }
 
 }
